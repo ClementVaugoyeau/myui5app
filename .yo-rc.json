@@ -1,0 +1,23 @@
+{
+  "generator-template-ui5-project": {
+    "projectname": "myui5app",
+    "namespaceUI5": "tutorial",
+    "enableFPM": false,
+    "platform": "SAP Launchpad service",
+    "viewtype": "XML",
+    "ui5libs": "Content delivery network (SAPUI5)",
+    "newdir": true,
+    "initrepo": true,
+    "namespaceURI": "tutorial",
+    "opa5pos": [
+      "Main"
+    ],
+    "opa5Journeys": [
+      "Main"
+    ],
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
