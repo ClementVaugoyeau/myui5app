@@ -3,7 +3,7 @@ sap.ui.require(["sap/ui/test/Opa5", "sap/ui/test/actions/Press"], function (Opa5
 
     Opa5.createPageObjects({
         onTheMainPage: {
-            viewName: "tutorial.myui5app.view.MainView",
+            viewName: "tutorial.myui5app.view.Products",
 
             actions: {
                 // add action functions here

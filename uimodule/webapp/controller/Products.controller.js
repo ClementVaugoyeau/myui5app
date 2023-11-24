@@ -6,7 +6,7 @@ sap.ui.define(
     function (Controller) {
         "use strict";
 
-        return Controller.extend("tutorial.myui5app.controller.MainView", {
+        return Controller.extend("tutorial.myui5app.controller.Products", {
             onInit: function () {},
         });
     },

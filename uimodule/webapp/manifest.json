@@ -7,7 +7,7 @@
     "applicationVersion": {
       "version": "0.0.1"
     },
-    "title": "{{appTitle}}",
+    "title": "Clem SAP",
     "description": "{{appDescription}}",
     "resources": "resources.json",
     "sourceTemplate": {
@@ -85,20 +85,20 @@
       },
       "routes": [
         {
-          "name": "RouteMainView",
+          "name": "RouteProducts",
           "pattern": ":?query:",
           "target": [
-            "TargetMainView"
+            "TargetProducts"
           ]
         }
       ],
       "targets": {
-        "TargetMainView": {
+        "TargetProducts": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "MainView",
-          "viewName": "MainView"
+          "viewId": "Products",
+          "viewName": "Products"
         }
       }
     },

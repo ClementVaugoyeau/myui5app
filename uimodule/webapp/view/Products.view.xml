@@ -1,0 +1,11 @@
+<mvc:View controllerName="tutorial.myui5app.controller.Products"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+   <Page id="Products" title="Available Products">
+    <content>
+      <List items="{/Products}">
+        <StandardListItem type="Active" title="{ProductName}" />
+      </List>
+    </content>
+  </Page>
+</mvc:View>
