@@ -31,5 +31,8 @@
     "ui5-middleware-cfdestination": "latest",
     "ui5-middleware-livereload": "latest",
     "ui5-task-zipper": "latest"
+  },
+  "dependencies": {
+    "generator-easy-ui5": "^3.6.3"
   }
 }

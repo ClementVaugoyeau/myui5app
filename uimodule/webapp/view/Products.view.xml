@@ -4,7 +4,7 @@
    <Page id="Products" title="Available Products">
     <content>
       <List items="{/Products}">
-        <StandardListItem type="Active" title="{ProductName}" />
+        <StandardListItem type="Navigation" press=".handleListItemPress" title="{ProductName}" />
       </List>
     </content>
   </Page>

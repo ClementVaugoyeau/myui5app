@@ -2,6 +2,12 @@
   "welcomeFile": "/index.html",
   "routes": [
     {
+      "source": "^/V2/(.*)$",
+      "authenticationType": "none",
+      "destination": "Northwind",
+      "csrfProtection": false
+    },
+    {
       "source": "^(.*)",
       "target": "$1",
       "authenticationType": "xsuaa",

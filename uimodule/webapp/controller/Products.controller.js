@@ -7,7 +7,15 @@ sap.ui.define(
         "use strict";
 
         return Controller.extend("tutorial.myui5app.controller.Products", {
-            onInit: function () {},
+            
+            handleListItemPress: function (oEvent) {
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                var selectedProductId = oEvent.getSource().getBindingContext().getProperty("ProductID");
+                oRouter.navTo("ProductDetail", {
+                  productId: selectedProductId
+                });
+                
+              }
         });
     },
 );
