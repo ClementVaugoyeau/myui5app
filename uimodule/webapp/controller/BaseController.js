@@ -58,5 +58,26 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/routing/History", "sap
                 this.getRouter().navTo("appHome", {}, true /* no history*/);
             }
         },
+
+        addHistoryEntry: (function () {
+            let aHistoryEntries = [];
+        
+            return function (oEntry, bReset) {
+                if (bReset) {
+                    aHistoryEntries = [];
+                }
+        
+                var bInHistory = aHistoryEntries.some(function (oHistoryEntry) {
+                    return oHistoryEntry.intent === oEntry.intent;
+                });
+        
+                if (!bInHistory) {
+                    aHistoryEntries.unshift(oEntry);
+                    this.getOwnerComponent().getService("ShellUIService").then(function (oService) {
+                        oService.setHierarchy(aHistoryEntries);
+                    });
+                }
+            };
+        })()
     });
 });

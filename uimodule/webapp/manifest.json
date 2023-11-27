@@ -7,8 +7,8 @@
     "applicationVersion": {
       "version": "0.0.1"
     },
-    "title": "Clem SAP",
-    "description": "{{appDescription}}",
+    "title": "Clem's Product List",
+    "description": "{{blabla}}",
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap-ux/fiori-freestyle-writer:basic",
@@ -83,6 +83,15 @@
           "preload": true
         },
         "dataSource": "V2NorthwindNorthwind.svc"
+      }
+    },
+    "services": {
+      "ShellUIService": {
+          "factoryName": "sap.ushell.ui5service.ShellUIService",
+          "lazy": false,
+          "settings": {
+              "setTitle": "auto"
+          }
       }
     },
     "resources": {

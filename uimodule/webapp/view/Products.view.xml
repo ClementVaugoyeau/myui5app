@@ -1,11 +1,15 @@
 <mvc:View controllerName="tutorial.myui5app.controller.Products"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:smartList="sap.ui.comp.smartlist"
+    xmlns:smartTable="sap.ui.comp.smarttable">
    <Page id="Products" title="Available Products">
-    <content>
-      <List items="{/Products}">
-        <StandardListItem type="Navigation" press=".handleListItemPress" title="{ProductName}" />
-      </List>
-    </content>
+     <smartFilterBar:SmartFilterBar id="smartFilterBar" persistencyKey="UniqueAndStablePersistencyKey" entitySet="Products" considerSelectionVariants="true" />
+        <smartList:SmartList id="smartProductList" smartFilter="smartFilterBar" entitySet="Products" expandFields="Category" header="Products List" showRowCount="true" showFullScreenButton="true" enableAutoBinding="true">
+            <smartList:listItemTemplate>
+                <StandardListItem id="listTemplate" type="Navigation" press="handleListItemPress" title="{ProductName}" info="{= ${UnitPrice} + ' €' }" description="{Category/CategoryName}" />
+            </smartList:listItemTemplate>
+        </smartList:SmartList>
   </Page>
 </mvc:View>
